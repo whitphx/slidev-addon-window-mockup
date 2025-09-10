@@ -44,3 +44,41 @@ foo();
 ````
 
 </div>
+
+---
+
+# Window types
+
+<div grid="~ cols-3" gap-4>
+
+<WindowMockup variant="terminal">
+
+```js
+function bar() {
+  console.log(Math.random());
+}
+
+bar();
+```
+
+</WindowMockup>
+
+<WindowMockup variant="editor">
+
+```js
+function baz() {
+  console.log(Math.random());
+}
+
+baz();
+```
+
+</WindowMockup>
+
+<WindowMockup variant="plain">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</WindowMockup>
+
+</div>

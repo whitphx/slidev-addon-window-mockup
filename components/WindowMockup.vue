@@ -23,7 +23,6 @@ interface Props {
   title?: string
   light?: boolean
   dark?: boolean
-  /** 見た目バリエーション: terminal / editor / plain */
   variant?: 'terminal' | 'editor' | 'plain'
   /** 本文の余白（例: '1rem'） */
   padding?: string | number
@@ -66,6 +65,9 @@ const shouldBeDark = computed(() => {
   box-shadow: var(--mw-shadow);
   overflow: hidden;
   background: var(--mw-body-bg);
+
+  display: flex;
+  flex-direction: column;
 }
 .mw-wrap.mw-dark {
   --mw-titlebar-bg: #2b2b2b;
@@ -110,13 +112,13 @@ const shouldBeDark = computed(() => {
 
 /* バリエーション（お好みで） */
 .mw-wrap.mw-terminal .mw-body {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  background: repeating-linear-gradient(
-    0deg, rgba(0,0,0,.04), rgba(0,0,0,.04) 1px, transparent 1px, transparent 22px
-  ), var(--mw-body-bg);
+  --slidev-code-background: var(--mw-body-bg);
 }
 .mw-wrap.mw-editor .mw-body {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--slidev-code-background);
 }
-.mw-body { overflow: auto; }
+.mw-body {
+  overflow: auto;
+  flex-grow: 1;
+}
 </style>
