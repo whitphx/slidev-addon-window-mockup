@@ -20,6 +20,10 @@ importers:
       vue:
         specifier: ^3.5.18
         version: 3.5.21(typescript@5.9.2)
+    devDependencies:
+      prettier:
+        specifier: 3.6.2
+        version: 3.6.2
 
 packages:
 

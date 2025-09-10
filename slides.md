@@ -2,7 +2,6 @@
 title: "Slidev Addon: Window Mockup"
 ---
 
-
 # Window Mockup Addon
 
 <WindowMockup>
@@ -31,17 +30,13 @@ foo();
 
 </WindowMockup>
 
-````html
-<WindowMockup light>
+```html
+<WindowMockup light> </WindowMockup>
+```
 
-</WindowMockup>
-````
-
-````html
-<WindowMockup dark>
-
-</WindowMockup>
-````
+```html
+<WindowMockup dark> </WindowMockup>
+```
 
 </div>
 
@@ -95,8 +90,8 @@ function qux() {
 }
 qux();
 ```
-</WindowMockup>
 
+</WindowMockup>
 
 ---
 
@@ -110,4 +105,5 @@ function qux() {
 }
 qux();
 ```
+
 </WindowMockup>
