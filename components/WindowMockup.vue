@@ -24,7 +24,6 @@ interface Props {
   light?: boolean
   dark?: boolean
   variant?: 'terminal' | 'editor' | 'plain'
-  /** 本文の余白（例: '1rem'） */
   padding?: string | number
 }
 const props = withDefaults(defineProps<Props>(), {

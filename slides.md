@@ -82,3 +82,32 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </WindowMockup>
 
 </div>
+
+---
+
+# Custom padding
+
+<WindowMockup padding="2rem">
+
+```js
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+</WindowMockup>
+
+
+---
+
+# Title
+
+<WindowMockup title="My Code Example">
+
+```js
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+</WindowMockup>
