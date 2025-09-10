@@ -1,5 +1,5 @@
 <template>
-  <figure class="mw-wrap" :class="[`mw-${variant}`, { 'mw-dark': dark }]">
+  <figure class="mw-wrap" :class="[`mw-${variant}`, { 'mw-dark': shouldBeDark }]">
     <figcaption class="mw-titlebar">
       <span class="mw-lights">
         <i class="mw-light mw-close" aria-hidden="true"></i>
@@ -16,8 +16,12 @@
 </template>
 
 <script setup lang="ts">
+import {computed} from "vue";
+import { useDarkMode } from "@slidev/client";
+
 interface Props {
   title?: string
+  light?: boolean
   dark?: boolean
   /** 見た目バリエーション: terminal / editor / plain */
   variant?: 'terminal' | 'editor' | 'plain'
@@ -26,11 +30,26 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   title: '',
+  light: false,
   dark: false,
   variant: 'plain',
   padding: '1rem',
 })
 const bodyPadding = typeof props.padding === 'number' ? `${props.padding}px` : props.padding
+
+const { isDark } = useDarkMode();
+const shouldBeDark = computed(() => {
+  if (props.dark) {
+    if (props.light) {
+      console.warn("Both light and dark props are true. dark takes precedence.");
+    }
+    return true;
+  } else if (props.light) {
+    return false;
+  } else {
+    return isDark.value;
+  }
+})
 </script>
 
 <style scoped>
