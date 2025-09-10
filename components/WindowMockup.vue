@@ -5,14 +5,29 @@
   >
     <figcaption class="mw-titlebar">
       <span class="mw-lights">
-        <i class="mw-light mw-close" aria-hidden="true"></i>
-        <i class="mw-light mw-min" aria-hidden="true"></i>
-        <i class="mw-light mw-max" aria-hidden="true"></i>
+        <i
+          class="mw-light mw-close"
+          aria-hidden="true"
+        />
+        <i
+          class="mw-light mw-min"
+          aria-hidden="true"
+        />
+        <i
+          class="mw-light mw-max"
+          aria-hidden="true"
+        />
       </span>
-      <span v-if="title" class="mw-title">{{ title }}</span>
-      <slot name="right"></slot>
+      <span
+        v-if="title"
+        class="mw-title"
+      >{{ title }}</span>
+      <slot name="right" />
     </figcaption>
-    <div class="mw-body" :style="{ padding: bodyPadding }">
+    <div
+      class="mw-body"
+      :style="{ padding: bodyPadding }"
+    >
       <slot />
     </div>
   </figure>
