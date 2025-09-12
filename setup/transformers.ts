@@ -23,7 +23,8 @@ function WindowedCodeblock(ctx: MarkdownTransformContext) {
 
 // We avoid using `import { defineTransformersSetup } from "@slidev/types"`
 // because `@slidev/types` can be not resolvable in the installed environment (maybe the monorepo case?).
-// So we just use static type annotation here instead of the helper function.
+// So we just import types and use the static type annotation here,
+// instead of importing the actual implementation of the helper function.
 const setup: TransformersSetup = () => {
   return {
     pre: [],
