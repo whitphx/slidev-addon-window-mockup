@@ -1,3 +1,5 @@
+// Copied from https://github.com/slidevjs/slidev/blob/591b6333a22a49cbb3ba90d1202c624897943c98/test/_tutils.ts
+
 import type { MarkdownTransformContext } from "@slidev/types";
 import path from "node:path";
 import MagicString from "magic-string-stack";
