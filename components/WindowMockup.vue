@@ -1,31 +1,31 @@
 <template>
   <figure
-    class="mw-wrap"
-    :class="{ 'mw-dark': shouldBeDark, 'mw-codeblock-container': codeblock }"
+    class="wrap"
+    :class="{ dark: shouldBeDark, 'codeblock-container': codeblock }"
   >
-    <figcaption class="mw-titlebar">
-      <span class="mw-lights">
+    <figcaption class="titlebar">
+      <span class="lights">
         <i
-          class="mw-light mw-close"
+          class="light close"
           aria-hidden="true"
         />
         <i
-          class="mw-light mw-min"
+          class="light min"
           aria-hidden="true"
         />
         <i
-          class="mw-light mw-max"
+          class="light max"
           aria-hidden="true"
         />
       </span>
       <span
         v-if="title"
-        class="mw-title"
+        class="title"
       >{{ title }}</span>
       <span class="title-right-placeholder" />
     </figcaption>
     <div
-      class="mw-body"
+      class="body"
       :style="{ padding: bodyPadding }"
     >
       <slot />
@@ -88,70 +88,70 @@ const shouldBeDark = computed(() => {
 </script>
 
 <style scoped>
-.mw-wrap {
+.wrap {
   color-scheme: light;
 
-  --mw-radius: 10px;
-  --mw-border: 1px solid #e6e6e6;
-  --mw-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --mw-titlebar-bg: #f5f6f7;
-  --mw-body-bg: #fff;
-  --mw-title-color: #5b5b5b;
+  --radius: 10px;
+  --border: 1px solid #e6e6e6;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --titlebar-bg: #f5f6f7;
+  --body-bg: #fff;
+  --title-color: #5b5b5b;
 
-  border: var(--mw-border);
-  border-radius: var(--mw-radius);
-  box-shadow: var(--mw-shadow);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   overflow: hidden;
-  background: var(--mw-body-bg);
+  background: var(--body-bg);
 
   display: flex;
   flex-direction: column;
 }
-.mw-wrap.mw-dark {
+.wrap.dark {
   color-scheme: dark;
 
-  --mw-titlebar-bg: #2b2b2b;
-  --mw-body-bg: #1f1f1f;
-  --mw-title-color: #cfcfcf;
-  --mw-border: 1px solid #3a3a3a;
+  --titlebar-bg: #2b2b2b;
+  --body-bg: #1f1f1f;
+  --title-color: #cfcfcf;
+  --border: 1px solid #3a3a3a;
 }
-.mw-titlebar {
+.titlebar {
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  background: var(--mw-titlebar-bg);
-  border-bottom: var(--mw-border);
+  background: var(--titlebar-bg);
+  border-bottom: var(--border);
 }
 
-.mw-lights {
+.lights {
   display: inline-flex;
   gap: 0.4rem;
   line-height: 0;
   padding: 0.5rem 0.75rem;
   flex: 0 1 5rem;
 }
-.mw-light {
+.light {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 50%;
   display: inline-block;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
-.mw-close {
+.close {
   background: #ff5f56;
 }
-.mw-min {
+.min {
   background: #ffbd2f;
 }
-.mw-max {
+.max {
   background: #27c93f;
 }
 
-.mw-title {
+.title {
   display: inline-block;
   flex: 1 1 auto;
-  color: var(--mw-title-color);
+  color: var(--title-color);
   font-size: 0.85rem;
   text-align: center;
   user-select: none;
@@ -161,35 +161,35 @@ const shouldBeDark = computed(() => {
 }
 
 .title-right-placeholder {
-  flex: 0 999999 5rem; /* flex-basis: 5rem must be same as .mw-lights */
+  flex: 0 999999 5rem; /* flex-basis: 5rem must be same as .lights */
   min-width: 0.5rem;
 }
 
-.mw-body {
+.body {
   overflow: auto;
   flex-grow: 1;
 }
 
-.mw-wrap.mw-codeblock-container .mw-body {
+.wrap.codeblock-container .body {
   --slidev-code-background: rgb(0 0 0 / 0);
 }
 
 /* Copy the theme-aware code block styles from https://github.com/slidevjs/slidev/blob/591b6333a22a49cbb3ba90d1202c624897943c98/packages/client/styles/code.css */
-.mw-wrap.mw-dark :deep(.shiki) {
+.wrap.dark :deep(.shiki) {
   color: var(--shiki-dark, inherit);
   --twoslash-popup-bg: var(--shiki-dark-bg, inherit);
 }
 
-.mw-wrap.mw-dark :deep(.shiki span) {
+.wrap.dark :deep(.shiki span) {
   color: var(--shiki-dark);
 }
 
-.mw-wrap:not(.mw-dark) :deep(.shiki) {
+.wrap:not(.dark) :deep(.shiki) {
   color: var(--shiki-light, inherit);
   --twoslash-popup-bg: var(--shiki-light-bg, inherit);
 }
 
-.mw-wrap:not(.mw-dark) :deep(.shiki span) {
+.wrap:not(.dark) :deep(.shiki span) {
   color: var(--shiki-light);
 }
 </style>
