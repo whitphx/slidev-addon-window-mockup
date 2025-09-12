@@ -229,9 +229,31 @@ Hello, World!
 
 # Title
 
+<div grid gap-4>
+
+<WindowMockup title="This is title">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</WindowMockup>
+
+```html
+<WindowMockup title="This is title">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</WindowMockup>
+```
+
+</div>
+
+---
+
+# Title on code block
+
 <div grid="~ cols-3" gap-4>
 
-<WindowMockup title="qux.js">
+<WindowMockup title="qux.js" codeblock>
 
 ```js
 function qux() {
@@ -257,7 +279,7 @@ qux();
 ```
 
 ```html
-    <WindowMockup title="qux.js">
+    <WindowMockup title="qux.js" codeblock>
 
     ```js
     function qux() {
