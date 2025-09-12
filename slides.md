@@ -106,6 +106,87 @@ Hello, World!
 
 ---
 
+# Code block with color scheme
+
+<div grid="~ cols-2" gap-4>
+
+<WindowMockup codeblock color="light">
+
+```shell
+$ echo "Hello, World!"
+Hello, World!
+```
+
+</WindowMockup>
+
+<WindowMockup codeblock color="dark">
+
+```shell
+$ echo "Hello, World!"
+Hello, World!
+```
+
+</WindowMockup>
+
+```html
+    <WindowMockup codeblock color="light">
+
+    ```shell
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+
+    </WindowMockup>
+```
+
+```html
+    <WindowMockup codeblock color="dark">
+
+    ```shell
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+
+    </WindowMockup>
+```
+
+
+</div>
+
+---
+
+# Codeblock syntax options
+
+<div grid="~ cols-2" gap-4>
+
+```shell window {color: 'light'}
+$ echo "Hello, World!"
+Hello, World!
+```
+
+```shell window {color: 'dark'}
+$ echo "Hello, World!"
+Hello, World!
+```
+
+```html
+    ```shell window {color: 'light'}
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+```
+
+```html
+    ```shell window {color: 'dark'}
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+```
+
+</div>
+
+---
+
 # Custom padding
 
 <WindowMockup padding="2rem">

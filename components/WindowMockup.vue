@@ -89,6 +89,8 @@ const shouldBeDark = computed(() => {
 
 <style scoped>
 .mw-wrap {
+  color-scheme: light;
+
   --mw-radius: 10px;
   --mw-border: 1px solid #e6e6e6;
   --mw-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -106,6 +108,8 @@ const shouldBeDark = computed(() => {
   flex-direction: column;
 }
 .mw-wrap.mw-dark {
+  color-scheme: dark;
+
   --mw-titlebar-bg: #2b2b2b;
   --mw-body-bg: #1f1f1f;
   --mw-title-color: #cfcfcf;
@@ -159,5 +163,24 @@ const shouldBeDark = computed(() => {
 
 .mw-wrap.mw-codeblock-container .mw-body {
   --slidev-code-background: rgb(0 0 0 / 0);
+}
+
+/* Copy the theme-aware code block styles from https://github.com/slidevjs/slidev/blob/591b6333a22a49cbb3ba90d1202c624897943c98/packages/client/styles/code.css */
+.mw-wrap.mw-dark :deep(.shiki) {
+  color: var(--shiki-dark, inherit);
+  --twoslash-popup-bg: var(--shiki-dark-bg, inherit);
+}
+
+.mw-wrap.mw-dark :deep(.shiki span) {
+  color: var(--shiki-dark);
+}
+
+.mw-wrap:not(.mw-dark) :deep(.shiki) {
+  color: var(--shiki-light, inherit);
+  --twoslash-popup-bg: var(--shiki-light-bg, inherit);
+}
+
+.mw-wrap:not(.mw-dark) :deep(.shiki span) {
+  color: var(--shiki-light);
 }
 </style>
