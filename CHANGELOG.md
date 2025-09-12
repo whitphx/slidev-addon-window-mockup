@@ -1,5 +1,11 @@
 # slidev-addon-window-mockup
 
+## 0.1.1
+
+### Patch Changes
+
+- [#5](https://github.com/whitphx/slidev-addon-window-mockup/pull/5) [`913824d`](https://github.com/whitphx/slidev-addon-window-mockup/commit/913824dc8ec929524d0a3aabafbb51fe034bf0d0) Thanks [@whitphx](https://github.com/whitphx)! - Include the transformer setup script in the package
+
 ## 0.1.0
 
 ### Minor Changes
