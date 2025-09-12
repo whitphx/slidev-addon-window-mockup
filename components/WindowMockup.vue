@@ -1,7 +1,7 @@
 <template>
   <figure
     class="mw-wrap"
-    :class="[`mw-${variant}`, { 'mw-dark': shouldBeDark }]"
+    :class="{ 'mw-dark': shouldBeDark, 'mw-terminal': terminal }"
   >
     <figcaption class="mw-titlebar">
       <span class="mw-lights">
@@ -41,14 +41,14 @@ interface Props {
   title?: string;
   light?: boolean;
   dark?: boolean;
-  variant?: "terminal" | "editor" | "plain";
+  terminal?: boolean; // In the terminal mode, the code block background is set as transparent
   padding?: string | number;
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "",
   light: false,
   dark: false,
-  variant: "plain",
+  terminal: false,
   padding: "1rem",
 });
 const bodyPadding =
@@ -136,15 +136,12 @@ const shouldBeDark = computed(() => {
   text-overflow: ellipsis;
 }
 
-/* バリエーション（お好みで） */
-.mw-wrap.mw-terminal .mw-body {
-  --slidev-code-background: var(--mw-body-bg);
-}
-.mw-wrap.mw-editor .mw-body {
-  background: var(--slidev-code-background);
-}
 .mw-body {
   overflow: auto;
   flex-grow: 1;
+}
+
+.mw-wrap.mw-terminal .mw-body {
+  --slidev-code-background: rgb(0 0 0 / 0);
 }
 </style>

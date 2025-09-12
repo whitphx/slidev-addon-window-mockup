@@ -42,18 +42,15 @@ foo();
 
 ---
 
-# Window types
+# Terminal mode
 
 <div grid="~ cols-3" gap-4>
 
-<WindowMockup variant="terminal">
+<WindowMockup terminal>
 
-```js
-function bar() {
-  console.log(Math.random());
-}
-
-bar();
+```shell
+$ echo "Hello, World!"
+Hello, World!
 ```
 
 </WindowMockup>
