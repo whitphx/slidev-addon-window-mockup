@@ -1,5 +1,11 @@
 # slidev-addon-window-mockup
 
+## 0.1.0
+
+### Minor Changes
+
+- [#3](https://github.com/whitphx/slidev-addon-window-mockup/pull/3) [`0008165`](https://github.com/whitphx/slidev-addon-window-mockup/commit/00081656f17c0d31a82dbde5792bf60329671351) Thanks [@whitphx](https://github.com/whitphx)! - Add codeblock prop to make the window mockup and its child codeblocks to adjust their styles
+
 ## 0.0.1
 
 ### Patch Changes
