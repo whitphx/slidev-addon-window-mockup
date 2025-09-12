@@ -38,7 +38,7 @@ Commands:
 
 ---
 
-# Color modes
+# Color schemes
 
 <div grid="~ cols-2" gap-4>
 
