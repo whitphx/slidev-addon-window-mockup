@@ -51,11 +51,11 @@ const props = withDefaults(defineProps<Props>(), {
   light: false,
   dark: false,
   codeblock: false,
-  padding: "1rem",
+  padding: undefined,
 });
 const bodyPadding = computed(() => {
-  if (props.codeblock) {
-    return "0.5rem";
+  if (props.padding == null) {
+    return props.codeblock ? "0.5rem" : "1rem";
   }
   return typeof props.padding === "number"
     ? `${props.padding}px`
