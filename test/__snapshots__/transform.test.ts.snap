@@ -11,6 +11,17 @@ console.log('Hello, World!');
 "
 `;
 
+exports[`language name + ranges + options + window 1`] = `
+"
+<WindowMockup codeblock v-bind="{}">
+\`\`\`js {*|1|2}{at: 1} 
+console.log('Hello, World!');
+
+\`\`\`
+</WindowMockup>
+"
+`;
+
 exports[`language name + ranges + window 1`] = `
 "
 <WindowMockup codeblock v-bind="{}">
