@@ -115,12 +115,17 @@ Hello, World!
     </WindowMockup>
 ```
 
+<div>
 ```html
     ```shell window
     $ echo "Hello, World!"
     Hello, World!
     ```
 ```
+
+The special `window` keyword is enabled by this addon.
+
+</div>
 
 </div>
 
