@@ -22,6 +22,26 @@ foo();
 
 <div grid="~ cols-2" gap-4>
 
+<WindowMockup color="light">
+
+</WindowMockup>
+
+<WindowMockup color="dark">
+
+</WindowMockup>
+
+```html
+<WindowMockup color="light">
+
+</WindowMockup>
+```
+
+```html
+<WindowMockup color="dark">
+
+</WindowMockup>
+```
+
 <WindowMockup light>
 
 </WindowMockup>
@@ -31,11 +51,15 @@ foo();
 </WindowMockup>
 
 ```html
-<WindowMockup light> </WindowMockup>
+<WindowMockup light>
+
+</WindowMockup>
 ```
 
 ```html
-<WindowMockup dark> </WindowMockup>
+<WindowMockup dark>
+
+</WindowMockup>
 ```
 
 </div>

@@ -39,13 +39,15 @@ import { useDarkMode } from "@slidev/client";
 
 interface Props {
   title?: string;
-  light?: boolean;
-  dark?: boolean;
+  color?: "light" | "dark";
+  light?: boolean; // Shorthand for color: "light"
+  dark?: boolean; // Shorthand for color: "dark"
   codeblock?: boolean; // In the codeblock mode, the window style is adjusted to better fit child codeblocks.
   padding?: string | number;
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "",
+  color: undefined,
   light: false,
   dark: false,
   codeblock: false,
@@ -62,6 +64,14 @@ const bodyPadding = computed(() => {
 
 const { isDark } = useDarkMode();
 const shouldBeDark = computed(() => {
+  if (props.color != null) {
+    if (props.light || props.dark) {
+      console.warn(
+        "Both color and light/dark props are set. color takes precedence.",
+      );
+    }
+    return props.color === "dark";
+  }
   if (props.dark) {
     if (props.light) {
       console.warn(
