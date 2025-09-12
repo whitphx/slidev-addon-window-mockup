@@ -11,6 +11,7 @@
   },
   "type": "module",
   "files": [
+    "setup",
     "components",
     "!**/*.test.*"
   ],
