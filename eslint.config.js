@@ -1,23 +1,23 @@
 // @ts-check
 
-import eslint from '@eslint/js';
-import { defineConfig } from 'eslint/config';
-import tseslint from 'typescript-eslint';
+import eslint from "@eslint/js";
+import { defineConfig } from "eslint/config";
+import tseslint from "typescript-eslint";
 import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
 
 export default defineConfig(
-  { ignores: ['*.d.ts', '**/coverage', '**/dist'] },
+  { ignores: ["*.d.ts", "**/coverage", "**/dist"] },
   {
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
-      ...pluginVue.configs['flat/recommended'],
+      ...pluginVue.configs["flat/recommended"],
     ],
-    files: ['**/*.{ts,vue}'],
+    files: ["**/*.{ts,vue}"],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: globals.browser,
       parserOptions: {
         parser: tseslint.parser,
@@ -27,4 +27,10 @@ export default defineConfig(
       // your rules
     },
   },
-)
+  {
+    files: ["test/**/*.{ts,vue}"],
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+);

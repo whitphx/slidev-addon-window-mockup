@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`language name + ranges + options + window + windowOptions 1`] = `
+"
+<WindowMockup codeblock v-bind="{'color': 'dark'}">
+\`\`\`js {*|1|2}{'maxHeight': '100px'} 
+console.log('Hello, World!');
+
+\`\`\`
+</WindowMockup>
+"
+`;
+
+exports[`language name + ranges + options + window 1`] = `
+"
+<WindowMockup codeblock v-bind="{}">
+\`\`\`js {*|1|2}{at: 1} 
+console.log('Hello, World!');
+
+\`\`\`
+</WindowMockup>
+"
+`;
+
+exports[`language name + ranges + window 1`] = `
+"
+<WindowMockup codeblock v-bind="{}">
+\`\`\`js {*|1|2} 
+console.log('Hello, World!');
+
+\`\`\`
+</WindowMockup>
+"
+`;
+
+exports[`language name + title + ranges + options + window + windowOptions 1`] = `
+"
+<WindowMockup codeblock v-bind="{'title':'foo.js','color': 'dark'}">
+\`\`\`js {*|1|2}{'maxHeight': '100px'} 
+console.log('Hello, World!');
+
+\`\`\`
+</WindowMockup>
+"
+`;
+
+exports[`language name + window 1`] = `
+"
+<WindowMockup codeblock v-bind="{}">
+\`\`\`js
+console.log('Hello, World!');
+
+\`\`\`
+</WindowMockup>
+"
+`;

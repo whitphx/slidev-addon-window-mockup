@@ -66,7 +66,7 @@ foo();
 
 ---
 
-# Wrap a codeblock
+# Wrap a code block
 
 <div grid="~ cols-2" gap-4>
 
@@ -155,6 +155,46 @@ Hello, World!
 
 ---
 
+# Code block with highlight animation
+
+<div grid="~ cols-2" gap-4>
+
+<WindowMockup codeblock>
+
+```shell {1|2}{at:1}
+$ echo "Hello, World!"
+Hello, World!
+```
+
+</WindowMockup>
+
+```shell {1|2}{at:1} window
+$ echo "Hello, World!"
+Hello, World!
+```
+
+```html
+    <WindowMockup codeblock>
+
+    ```shell {1|2}{at:1}
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+
+    </WindowMockup>
+```
+
+```html
+    ```shell {1|2}{at:1} window
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+```
+
+</div>
+
+---
+
 # Codeblock syntax options
 
 <div grid="~ cols-2" gap-4>
@@ -180,6 +220,70 @@ Hello, World!
     ```shell window {color: 'dark'}
     $ echo "Hello, World!"
     Hello, World!
+    ```
+```
+
+</div>
+
+---
+
+# Title
+
+<div grid="~ cols-3" gap-4>
+
+<WindowMockup title="qux.js">
+
+```js
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+</WindowMockup>
+
+```js [qux.js] window
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+```js window {'title': 'qux.js'}
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+```html
+    <WindowMockup title="qux.js">
+
+    ```js
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
+    ```
+
+    </WindowMockup>
+```
+
+```html
+    ```js [qux.js] window
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
+    ```
+```
+
+```html
+    ```js window {'title': 'qux.js'}
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
     ```
 ```
 
@@ -227,6 +331,5 @@ qux();
 ```
 
 </WindowMockup>
-
 
 </div>
