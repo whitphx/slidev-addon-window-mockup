@@ -2,19 +2,39 @@
 title: "Slidev Addon: Window Mockup"
 ---
 
-# Window Mockup Addon
+# Slidev Window Mockup
+
+<div grid="~ cols-2" gap-4>
 
 <WindowMockup>
 
-```js
-function foo() {
-  console.log(Math.random());
-}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-foo();
+</WindowMockup>
+
+
+<WindowMockup codeblock>
+
+```shell
+$ echo "Hello, World!"
+Hello, World!
+
+$ slidev --help
+slidev [args]
+
+Commands:
+  slidev [entry]                 Start a local server for Slidev    [Default]
+  slidev build [entry..]         Build hostable SPA
+  slidev format [entry..]        Format the markdown file
+  slidev theme [subcommand]      Theme related operations
+  slidev export [entry..]        Export slides to PDF
+  slidev export-notes [entry..]  Export slide notes to PDF
+
 ```
 
 </WindowMockup>
+
+</div>
 
 ---
 
