@@ -42,39 +42,41 @@ foo();
 
 ---
 
-# Window types
+# Wrap a codeblock
 
-<div grid="~ cols-3" gap-4>
+<div grid="~ cols-2" gap-4>
 
-<WindowMockup variant="terminal">
+<WindowMockup codeblock>
 
-```js
-function bar() {
-  console.log(Math.random());
-}
-
-bar();
+```shell
+$ echo "Hello, World!"
+Hello, World!
 ```
 
 </WindowMockup>
 
-<WindowMockup variant="editor">
-
-```js
-function baz() {
-  console.log(Math.random());
-}
-
-baz();
+```shell window
+$ echo "Hello, World!"
+Hello, World!
 ```
 
-</WindowMockup>
+```html
+    <WindowMockup codeblock>
 
-<WindowMockup variant="plain">
+    ```shell
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </WindowMockup>
+```
 
-</WindowMockup>
+```html
+    ```shell window
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+```
 
 </div>
 

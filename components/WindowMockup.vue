@@ -1,7 +1,7 @@
 <template>
   <figure
     class="mw-wrap"
-    :class="[`mw-${variant}`, { 'mw-dark': shouldBeDark }]"
+    :class="{ 'mw-dark': shouldBeDark, 'mw-codeblock-container': codeblock }"
   >
     <figcaption class="mw-titlebar">
       <span class="mw-lights">
@@ -41,18 +41,24 @@ interface Props {
   title?: string;
   light?: boolean;
   dark?: boolean;
-  variant?: "terminal" | "editor" | "plain";
+  codeblock?: boolean; // In the codeblock mode, the window style is adjusted to better fit child codeblocks.
   padding?: string | number;
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "",
   light: false,
   dark: false,
-  variant: "plain",
+  codeblock: false,
   padding: "1rem",
 });
-const bodyPadding =
-  typeof props.padding === "number" ? `${props.padding}px` : props.padding;
+const bodyPadding = computed(() => {
+  if (props.codeblock) {
+    return "0.5rem";
+  }
+  return typeof props.padding === "number"
+    ? `${props.padding}px`
+    : props.padding;
+});
 
 const { isDark } = useDarkMode();
 const shouldBeDark = computed(() => {
@@ -136,15 +142,12 @@ const shouldBeDark = computed(() => {
   text-overflow: ellipsis;
 }
 
-/* バリエーション（お好みで） */
-.mw-wrap.mw-terminal .mw-body {
-  --slidev-code-background: var(--mw-body-bg);
-}
-.mw-wrap.mw-editor .mw-body {
-  background: var(--slidev-code-background);
-}
 .mw-body {
   overflow: auto;
   flex-grow: 1;
+}
+
+.mw-wrap.mw-codeblock-container .mw-body {
+  --slidev-code-background: rgb(0 0 0 / 0);
 }
 </style>
