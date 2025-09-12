@@ -3,17 +3,31 @@ import type {
   TransformersSetup,
 } from "@slidev/types";
 
-function WindowedCodeblock(ctx: MarkdownTransformContext) {
+// Ref: const reCodeBlock = /^```([\w'-]+)?\s*(?:\[(.*?)\])?\s*(?:\{([\w*,|-]+)\}\s*?(\{[^}]*\})?([^\r\n]*))?\r?\n((?:(?!^```)[\s\S])*?)^```$/gm
+// from https://github.com/slidevjs/slidev/blob/591b6333a22a49cbb3ba90d1202c624897943c98/packages/slidev/node/syntax/transform/code-wrapper.ts#L5
+const reWindowedCodeblock =
+  /^```([\w'-]+)?\s*(?:\[(.*?)\])?\s*(\{[\w*,|-]+\}\s*?(?:\{[^}]*\})?[^\r\n]*)?window\s*?(\{[^}]*\})?\r?\n((?:(?!^```)[\s\S])*?)^```$/gm;
+
+export function transformWindowedCodeblock(ctx: MarkdownTransformContext) {
   ctx.s.replace(
-    /^```(\S+)? *(\{[^\n]*\})? +window *(\{[^\n]*\})? *\n([\s\S]+?)\n```/gm,
-    (full, lang = "", options = "", windowOptions = "", code = "") => {
-      console.log({ full, lang, options, windowOptions, code });
+    reWindowedCodeblock,
+    (
+      full,
+      lang = "",
+      title = "",
+      optionsStr,
+      windowOptions: string = "",
+      code: string,
+    ) => {
       windowOptions = windowOptions.trim() || "{}";
+      if (windowOptions.startsWith("{") && title) {
+        windowOptions = "{" + `'title':'${title}',` + windowOptions.slice(1);
+      }
       return (
         `<WindowMockup codeblock v-bind="${windowOptions}">\n` +
         "```" +
         lang +
-        options +
+        (optionsStr ? " " + optionsStr : "") +
         "\n" +
         code +
         "\n```" +
@@ -30,7 +44,7 @@ function WindowedCodeblock(ctx: MarkdownTransformContext) {
 const setup: TransformersSetup = () => {
   return {
     pre: [],
-    preCodeblock: [WindowedCodeblock],
+    preCodeblock: [transformWindowedCodeblock],
     postCodeblock: [],
     post: [],
   };

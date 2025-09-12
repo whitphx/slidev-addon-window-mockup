@@ -187,9 +187,11 @@ Hello, World!
 
 ---
 
-# Custom padding
+# Title
 
-<WindowMockup padding="2rem">
+<div grid="~ cols-3" gap-4>
+
+<WindowMockup title="qux.js">
 
 ```js
 function qux() {
@@ -200,11 +202,58 @@ qux();
 
 </WindowMockup>
 
+```js [qux.js] window
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+```js window {'title': 'qux.js'}
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+```html
+    <WindowMockup title="qux.js">
+
+    ```js
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
+    ```
+
+    </WindowMockup>
+```
+
+```html
+    ```js [qux.js] window
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
+    ```
+```
+
+```html
+    ```js window {'title': 'qux.js'}
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
+    ```
+```
+
+</div>
+
 ---
 
-# Title
+# Custom padding
 
-<WindowMockup title="My Code Example">
+<WindowMockup padding="2rem">
 
 ```js
 function qux() {
