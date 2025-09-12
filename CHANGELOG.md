@@ -1,5 +1,11 @@
 # slidev-addon-window-mockup
 
+## 0.1.2
+
+### Patch Changes
+
+- [#7](https://github.com/whitphx/slidev-addon-window-mockup/pull/7) [`c1eadff`](https://github.com/whitphx/slidev-addon-window-mockup/commit/c1eadff64306a04ed74bdc2c83f11b21d3c7889a) Thanks [@whitphx](https://github.com/whitphx)! - Fix the transformer setup function not to use the helper function imported from @slidev/types because it can be not resolvable in some installed environment
+
 ## 0.1.1
 
 ### Patch Changes
