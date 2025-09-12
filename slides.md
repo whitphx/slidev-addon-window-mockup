@@ -313,13 +313,35 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 # Custom padding
 
+<div grid="~ cols-2" gap-4>
+
 <WindowMockup padding="2rem">
 
-```js
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</WindowMockup>
+
+```js window {padding: '2rem'}
 function qux() {
   console.log(Math.random());
 }
 qux();
 ```
 
-</WindowMockup>
+```html
+    <WindowMockup padding="2rem">
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    </WindowMockup>
+```
+
+```html
+    ```js window {padding: '2rem'}
+    function qux() {
+      console.log(Math.random());
+    }
+    qux();
+    ```
+```
+</div>
