@@ -291,6 +291,26 @@ qux();
 
 ---
 
+# Title positioning and overflow
+
+<div grid="~ cols-2" gap-4>
+
+<WindowMockup title="Centered">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</WindowMockup>
+
+<WindowMockup title="Looooooooooooooooooooooooooooooooooooooooooooooooooooooooong title">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+</WindowMockup>
+
+</div>
+
+---
+
 # Custom padding
 
 <WindowMockup padding="2rem">
