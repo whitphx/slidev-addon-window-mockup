@@ -297,23 +297,13 @@ qux();
 
 <WindowMockup title="Centered">
 
-```js
-function qux() {
-  console.log(Math.random());
-}
-qux();
-```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 </WindowMockup>
 
 <WindowMockup title="Looooooooooooooooooooooooooooooooooooooooooooooooooooooooong title">
 
-```js
-function qux() {
-  console.log(Math.random());
-}
-qux();
-```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 </WindowMockup>
 
