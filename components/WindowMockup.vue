@@ -1,7 +1,7 @@
 <template>
   <figure
     class="mw-wrap"
-    :class="{ 'mw-dark': shouldBeDark, 'mw-terminal': terminal }"
+    :class="{ 'mw-dark': shouldBeDark, 'mw-codeblock-container': codeblock }"
   >
     <figcaption class="mw-titlebar">
       <span class="mw-lights">
@@ -41,18 +41,24 @@ interface Props {
   title?: string;
   light?: boolean;
   dark?: boolean;
-  terminal?: boolean; // In the terminal mode, the code block background is set as transparent
+  codeblock?: boolean; // In the codeblock mode, the window style is adjusted to better fit child codeblocks.
   padding?: string | number;
 }
 const props = withDefaults(defineProps<Props>(), {
   title: "",
   light: false,
   dark: false,
-  terminal: false,
+  codeblock: false,
   padding: "1rem",
 });
-const bodyPadding =
-  typeof props.padding === "number" ? `${props.padding}px` : props.padding;
+const bodyPadding = computed(() => {
+  if (props.codeblock) {
+    return "0.5rem";
+  }
+  return typeof props.padding === "number"
+    ? `${props.padding}px`
+    : props.padding;
+});
 
 const { isDark } = useDarkMode();
 const shouldBeDark = computed(() => {
@@ -141,7 +147,7 @@ const shouldBeDark = computed(() => {
   flex-grow: 1;
 }
 
-.mw-wrap.mw-terminal .mw-body {
+.mw-wrap.mw-codeblock-container .mw-body {
   --slidev-code-background: rgb(0 0 0 / 0);
 }
 </style>
