@@ -123,12 +123,13 @@ const shouldBeDark = computed(() => {
   background: var(--mw-titlebar-bg);
   border-bottom: var(--mw-border);
 }
+
 .mw-lights {
   display: inline-flex;
   gap: 0.4rem;
   line-height: 0;
   padding: 0.5rem 0.75rem;
-  width: 8rem;
+  flex: 0 1 5rem;
 }
 .mw-light {
   width: 0.8rem;
@@ -149,7 +150,7 @@ const shouldBeDark = computed(() => {
 
 .mw-title {
   display: inline-block;
-  flex-grow: 1;
+  flex: 1 1 auto;
   color: var(--mw-title-color);
   font-size: 0.85rem;
   text-align: center;
@@ -160,9 +161,8 @@ const shouldBeDark = computed(() => {
 }
 
 .title-right-placeholder {
-  width: 8rem; /* Same width as .mw-lights to center the title */
-  min-width: 0;
-  flex-grow: 0;
+  flex: 0 999999 5rem; /* flex-basis: 5rem must be same as .mw-lights */
+  min-width: 0.5rem;
 }
 
 .mw-body {

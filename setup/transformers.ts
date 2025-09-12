@@ -7,7 +7,6 @@ function WindowedCodeblock(ctx: MarkdownTransformContext) {
   ctx.s.replace(
     /^```(\S+)? *(\{[^\n]*\})? +window *(\{[^\n]*\})? *\n([\s\S]+?)\n```/gm,
     (full, lang = "", options = "", windowOptions = "", code = "") => {
-      console.log({ full, lang, options, windowOptions, code });
       windowOptions = windowOptions.trim() || "{}";
       return (
         `<WindowMockup codeblock v-bind="${windowOptions}">\n` +

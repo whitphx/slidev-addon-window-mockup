@@ -204,7 +204,9 @@ qux();
 
 # Title
 
-<WindowMockup title="My Code Example">
+<div grid="~ cols-2" gap-4>
+
+<WindowMockup title="Some title">
 
 ```js
 function qux() {
@@ -214,3 +216,17 @@ qux();
 ```
 
 </WindowMockup>
+
+<WindowMockup title="Looooooooooooooooooooooooooooooooooooooooooooooooooooooooong title">
+
+```js
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+</WindowMockup>
+
+
+</div>
