@@ -291,26 +291,11 @@ qux();
 
 ---
 
-# Custom padding
-
-<WindowMockup padding="2rem">
-
-```js
-function qux() {
-  console.log(Math.random());
-}
-qux();
-```
-
-</WindowMockup>
-
----
-
-# Title
+# Title positioning and overflow
 
 <div grid="~ cols-2" gap-4>
 
-<WindowMockup title="Some title">
+<WindowMockup title="Centered">
 
 ```js
 function qux() {
@@ -333,3 +318,18 @@ qux();
 </WindowMockup>
 
 </div>
+
+---
+
+# Custom padding
+
+<WindowMockup padding="2rem">
+
+```js
+function qux() {
+  console.log(Math.random());
+}
+qux();
+```
+
+</WindowMockup>
