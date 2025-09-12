@@ -66,7 +66,7 @@ foo();
 
 ---
 
-# Wrap a codeblock
+# Wrap a code block
 
 <div grid="~ cols-2" gap-4>
 
@@ -150,6 +150,46 @@ Hello, World!
     </WindowMockup>
 ```
 
+
+</div>
+
+---
+
+# Code block with highlight animation
+
+<div grid="~ cols-2" gap-4>
+
+<WindowMockup codeblock>
+
+```shell {1|2}{at:1}
+$ echo "Hello, World!"
+Hello, World!
+```
+
+</WindowMockup>
+
+```shell {1|2}{at:1} window
+$ echo "Hello, World!"
+Hello, World!
+```
+
+```html
+    <WindowMockup codeblock>
+
+    ```shell {1|2}{at:1}
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+
+    </WindowMockup>
+```
+
+```html
+    ```shell {1|2}{at:1} window
+    $ echo "Hello, World!"
+    Hello, World!
+    ```
+```
 
 </div>
 
