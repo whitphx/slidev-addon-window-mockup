@@ -120,7 +120,6 @@ const shouldBeDark = computed(() => {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
   background: var(--mw-titlebar-bg);
   border-bottom: var(--mw-border);
 }
@@ -128,6 +127,7 @@ const shouldBeDark = computed(() => {
   display: inline-flex;
   gap: 0.4rem;
   line-height: 0;
+  margin: 0.5rem 0 0.5rem 0.75rem;
 }
 .mw-light {
   width: 0.8rem;
