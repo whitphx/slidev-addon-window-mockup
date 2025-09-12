@@ -1,5 +1,15 @@
 # slidev-addon-window-mockup
 
+## 0.2.0
+
+### Minor Changes
+
+- [#11](https://github.com/whitphx/slidev-addon-window-mockup/pull/11) [`a2e994b`](https://github.com/whitphx/slidev-addon-window-mockup/commit/a2e994b01a5bf605787fea51bd41d2d87527ddff) Thanks [@whitphx](https://github.com/whitphx)! - Markdonw codeblock syntax with the window option accepts options for the window mockup
+
+- [#11](https://github.com/whitphx/slidev-addon-window-mockup/pull/11) [`a2e994b`](https://github.com/whitphx/slidev-addon-window-mockup/commit/a2e994b01a5bf605787fea51bd41d2d87527ddff) Thanks [@whitphx](https://github.com/whitphx)! - Adjust the Shiki color to the outer window mockup color setting
+
+- [#9](https://github.com/whitphx/slidev-addon-window-mockup/pull/9) [`3571ab2`](https://github.com/whitphx/slidev-addon-window-mockup/commit/3571ab20c7d4c700c9e7e93b6884ef9904c5a707) Thanks [@whitphx](https://github.com/whitphx)! - Add color prop
+
 ## 0.1.2
 
 ### Patch Changes
