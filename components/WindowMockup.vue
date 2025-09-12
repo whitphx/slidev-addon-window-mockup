@@ -90,6 +90,7 @@ const shouldBeDark = computed(() => {
 <style scoped>
 .mw-wrap {
   color-scheme: light;
+
   --mw-radius: 10px;
   --mw-border: 1px solid #e6e6e6;
   --mw-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -108,6 +109,7 @@ const shouldBeDark = computed(() => {
 }
 .mw-wrap.mw-dark {
   color-scheme: dark;
+
   --mw-titlebar-bg: #2b2b2b;
   --mw-body-bg: #1f1f1f;
   --mw-title-color: #cfcfcf;
