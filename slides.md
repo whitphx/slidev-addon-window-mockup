@@ -348,7 +348,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 </WindowMockup>
 
-<WindowMockup title="Looooooooooooooooooooooooooooooooooooooooooooooooooooooooong title">
+<WindowMockup title="Long title. This is looooooooooooooooooooooooooooooooooooooooooooooooooooooooong">
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
