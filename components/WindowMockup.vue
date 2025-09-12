@@ -22,7 +22,7 @@
         v-if="title"
         class="mw-title"
       >{{ title }}</span>
-      <slot name="right" />
+      <span class="title-right-placeholder" />
     </figcaption>
     <div
       class="mw-body"
@@ -116,10 +116,10 @@ const shouldBeDark = computed(() => {
   --mw-border: 1px solid #3a3a3a;
 }
 .mw-titlebar {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+
   background: var(--mw-titlebar-bg);
   border-bottom: var(--mw-border);
 }
@@ -127,7 +127,8 @@ const shouldBeDark = computed(() => {
   display: inline-flex;
   gap: 0.4rem;
   line-height: 0;
-  margin: 0.5rem 0 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem;
+  width: 8rem;
 }
 .mw-light {
   width: 0.8rem;
@@ -147,13 +148,21 @@ const shouldBeDark = computed(() => {
 }
 
 .mw-title {
-  justify-self: center;
+  display: inline-block;
+  flex-grow: 1;
   color: var(--mw-title-color);
   font-size: 0.85rem;
+  text-align: center;
   user-select: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.title-right-placeholder {
+  width: 8rem; /* Same width as .mw-lights to center the title */
+  min-width: 0;
+  flex-grow: 0;
 }
 
 .mw-body {
