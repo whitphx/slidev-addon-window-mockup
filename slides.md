@@ -395,7 +395,7 @@ qux();
 
 ---
 
-# With Shiki magic move
+# With Shiki Magic Move
 
 <WindowMockup codeblock>
 
