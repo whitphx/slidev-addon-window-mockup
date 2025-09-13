@@ -394,6 +394,7 @@ qux();
 </div>
 
 ---
+
 # With Shiki magic move
 
 <WindowMockup codeblock>
