@@ -29,10 +29,9 @@ addons:
 
 Wrap any content in a `<WindowMockup>` component:
 
-```html
+```md
 <WindowMockup>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua.
+  Lorem ipsum dolor sit amet.
 </WindowMockup>
 ```
 
@@ -40,16 +39,24 @@ Wrap any content in a `<WindowMockup>` component:
 
 Choose between light and dark themes:
 
-```html
+```md
 <!-- Using color prop -->
-<WindowMockup color="light"> Content here </WindowMockup>
+<WindowMockup color="light">
+  Content here
+</WindowMockup>
 
-<WindowMockup color="dark"> Content here </WindowMockup>
+<WindowMockup color="dark">
+  Content here
+</WindowMockup>
 
 <!-- Using shorthand attributes -->
-<WindowMockup light> Content here </WindowMockup>
+<WindowMockup light>
+  Content here
+</WindowMockup>
 
-<WindowMockup dark> Content here </WindowMockup>
+<WindowMockup dark>
+  Content here
+</WindowMockup>
 ```
 
 ### Code Block Integration
@@ -58,9 +65,12 @@ Choose between light and dark themes:
 
 Use the `codeblock` prop to wrap code blocks:
 
-````html
+````md
 <WindowMockup codeblock>
-  ```shell $ echo "Hello, World!" Hello, World! ```
+```shell
+$ echo "Hello, World!"
+Hello, World!
+```
 </WindowMockup>
 ````
 
