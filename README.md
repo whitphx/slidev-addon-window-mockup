@@ -16,12 +16,16 @@ npm install slidev-addon-window-mockup
 
 ## Slidev configuration
 
+Add the `addons` option in your [headmatter](https://sli.dev/custom/#headmatter) with `window-mockup`:
+
 ```yml
 ---
 addons:
   - window-mockup
 ---
 ```
+
+See also: https://sli.dev/guide/theme-addon#use-addon
 
 ## Usage
 
