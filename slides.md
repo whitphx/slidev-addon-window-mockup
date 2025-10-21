@@ -400,13 +400,19 @@ qux();
 <WindowMockup codeblock>
 
 ````md magic-move
+```ts
+console.log('Hello, World!')
+```
 ```js
+console.log('Hello, World!')
 console.log(`Step ${1}`)
 ```
 ```js
+console.log('Hello, World!')
 console.log(`Step ${1 + 1}`)
 ```
 ```ts
+console.log('Hello, World!')
 console.log(`Step ${3}` as string)
 ```
 ````
