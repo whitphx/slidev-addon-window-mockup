@@ -1,0 +1,28 @@
+name: Setup
+description: Set up pnpm, Node.js, and Aikido Safe Chain for package-manager hardening
+
+inputs:
+  registry-url:
+    description: Optional registry URL to configure for setup-node (e.g. for npm publishing)
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0
+      with:
+        version: latest
+        run_install: false
+
+    - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+      with:
+        node-version-file: .nvmrc
+        cache: "pnpm"
+        registry-url: ${{ inputs.registry-url }}
+
+    # Install after setup-node, before any package-manager install, per
+    # https://github.com/AikidoSec/safe-chain#usage-in-cicd
+    - name: Install Aikido Safe Chain
+      shell: bash
+      run: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh -s -- --ci
