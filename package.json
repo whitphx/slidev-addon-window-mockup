@@ -19,8 +19,8 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "lint": "eslint .",
-    "format": "prettier . --write",
+    "lint": "oxlint",
+    "format": "oxfmt",
     "test": "vitest",
     "prepare": "husky",
     "ci:publish": "changeset publish"
@@ -31,17 +31,13 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.2",
     "@changesets/cli": "^2.29.7",
-    "@eslint/js": "^9.39.1",
     "@slidev/cli": "^52.6.0",
     "@slidev/theme-default": "latest",
-    "eslint": "^9.39.2",
-    "eslint-plugin-vue": "^10.5.1",
-    "globals": "^16.5.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
-    "prettier": "3.8.1",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.3",
     "vitest": "^3.2.4"
   }
 }
