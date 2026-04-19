@@ -5,29 +5,14 @@
   >
     <figcaption class="titlebar">
       <span class="lights">
-        <i
-          class="light close"
-          aria-hidden="true"
-        />
-        <i
-          class="light min"
-          aria-hidden="true"
-        />
-        <i
-          class="light max"
-          aria-hidden="true"
-        />
+        <i class="light close" aria-hidden="true" />
+        <i class="light min" aria-hidden="true" />
+        <i class="light max" aria-hidden="true" />
       </span>
-      <span
-        v-if="title"
-        class="title"
-      >{{ title }}</span>
+      <span v-if="title" class="title">{{ title }}</span>
       <span class="title-right-placeholder" />
     </figcaption>
-    <div
-      class="body"
-      :style="{ padding: bodyPadding }"
-    >
+    <div class="body" :style="{ padding: bodyPadding }">
       <slot />
     </div>
   </figure>

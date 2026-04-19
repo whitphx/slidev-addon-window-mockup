@@ -1,20 +1,20 @@
 {
   "name": "slidev-addon-window-mockup",
   "version": "0.3.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/whitphx/slidev-addon-window-mockup.git"
   },
-  "license": "MIT",
-  "publishConfig": {
-    "provenance": true
-  },
-  "type": "module",
   "files": [
     "setup",
     "components",
     "!**/*.test.*"
   ],
+  "type": "module",
+  "publishConfig": {
+    "provenance": true
+  },
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
