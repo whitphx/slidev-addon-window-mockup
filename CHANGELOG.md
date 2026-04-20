@@ -1,5 +1,28 @@
 # slidev-addon-window-mockup
 
+## 0.3.1
+
+### Patch Changes
+
+- [#74](https://github.com/whitphx/slidev-addon-window-mockup/pull/74) [`04ee456`](https://github.com/whitphx/slidev-addon-window-mockup/commit/04ee4562c9bfe91d6f3e436cd4539153d7229f1a) Thanks [@whitphx](https://github.com/whitphx)! - Refresh transitive `js-yaml` from 3.14.1 to the patched 3.14.2, clearing
+  prototype-pollution advisory GHSA-mh29-5h37-fv8m reported by the
+  dependency review workflow.
+
+- [#74](https://github.com/whitphx/slidev-addon-window-mockup/pull/74) [`fae54ce`](https://github.com/whitphx/slidev-addon-window-mockup/commit/fae54ceba582e3a7ca38061af381bf71c75b036c) Thanks [@whitphx](https://github.com/whitphx)! - Refresh `pnpm-lock.yaml` to deduplicate transitive `vite` resolutions onto
+  a single patched version, clearing three security advisories
+  (GHSA-p9ff-h696-f583, GHSA-v2wj-q39q-566r, GHSA-4w7w-66w2-5vf9).
+
+- [#74](https://github.com/whitphx/slidev-addon-window-mockup/pull/74) [`7f1ff61`](https://github.com/whitphx/slidev-addon-window-mockup/commit/7f1ff61c74d033a8b29363a3827fd5fdd612f395) Thanks [@whitphx](https://github.com/whitphx)! - Migrate dev tooling from ESLint + Prettier to the Oxc toolchain (`oxlint`
+
+  - `oxfmt`) and enable oxlint's type-aware linting. No changes to the
+    published runtime behavior.
+
+- [#74](https://github.com/whitphx/slidev-addon-window-mockup/pull/74) [`1251504`](https://github.com/whitphx/slidev-addon-window-mockup/commit/1251504c05b58cfcaa3d974dcdb663ead1bf7c6f) Thanks [@whitphx](https://github.com/whitphx)! - Pin transitive `dompurify` to `>=3.4.0` via a pnpm override so
+  `monaco-editor`'s pinned `dompurify@3.2.7` is replaced with a patched
+  release, clearing five security advisories (GHSA-v2wj-7wpq-c8vv,
+  GHSA-h8r8-wccr-v5f2, GHSA-cj63-jhhr-wcxv, GHSA-cjmm-f4jc-qw8r,
+  GHSA-39q2-94rc-95cp).
+
 ## 0.3.0
 
 ### Minor Changes
