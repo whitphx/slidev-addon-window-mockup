@@ -21,7 +21,7 @@ export function transformWindowedCodeblock(ctx: MarkdownTransformContext) {
     ) => {
       windowOptions = windowOptions.trim() || "{}";
       if (windowOptions.startsWith("{") && title) {
-        windowOptions = "{" + `'title':'${title}',` + windowOptions.slice(1);
+        windowOptions = `{'title':'${title}',${windowOptions.slice(1)}`;
       }
       return (
         `<WindowMockup codeblock v-bind="${windowOptions}">\n` +
