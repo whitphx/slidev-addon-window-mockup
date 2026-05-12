@@ -13,7 +13,7 @@ importers:
     dependencies:
       vue:
         specifier: ^3.5.18
-        version: 3.5.21(typescript@5.9.3)
+        version: 3.5.21(typescript@6.0.2)
     devDependencies:
       '@changesets/changelog-github':
         specifier: ^0.5.2
@@ -43,8 +43,8 @@ importers:
         specifier: ^0.21.1
         version: 0.21.1
       typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
+        specifier: ^6.0.2
+        version: 6.0.2
       vitest:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@22.18.12)(jiti@2.6.1)(yaml@2.8.3)
@@ -3417,6 +3417,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@6.0.2:
+    resolution: {integrity: sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
@@ -5656,11 +5661,11 @@ snapshots:
       '@vue/shared': 3.5.32
       csstype: 3.2.3
 
-  '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@5.9.3))':
+  '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@6.0.2))':
     dependencies:
       '@vue/compiler-ssr': 3.5.21
       '@vue/shared': 3.5.21
-      vue: 3.5.21(typescript@5.9.3)
+      vue: 3.5.21(typescript@6.0.2)
 
   '@vue/server-renderer@3.5.32(vue@3.5.32(typescript@5.9.3))':
     dependencies:
@@ -7711,6 +7716,8 @@ snapshots:
 
   typescript@5.9.3: {}
 
+  typescript@6.0.2: {}
+
   uc.micro@2.1.0: {}
 
   ufo@1.6.1: {}
@@ -8093,15 +8100,15 @@ snapshots:
     optionalDependencies:
       '@vue/compiler-sfc': 3.5.32
 
-  vue@3.5.21(typescript@5.9.3):
+  vue@3.5.21(typescript@6.0.2):
     dependencies:
       '@vue/compiler-dom': 3.5.21
       '@vue/compiler-sfc': 3.5.21
       '@vue/runtime-dom': 3.5.21
-      '@vue/server-renderer': 3.5.21(vue@3.5.21(typescript@5.9.3))
+      '@vue/server-renderer': 3.5.21(vue@3.5.21(typescript@6.0.2))
       '@vue/shared': 3.5.21
     optionalDependencies:
-      typescript: 5.9.3
+      typescript: 6.0.2
 
   vue@3.5.32(typescript@5.9.3):
     dependencies:
